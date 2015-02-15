@@ -14,8 +14,7 @@ class FileField(BaseField):
 
     proxy_class = FieldFile
 
-    def __init__(self, size=None, upload_to='', storage=None, **kwargs):
-        self.size = size
+    def __init__(self, upload_to='', storage=None, **kwargs):
         self.storage = storage or default_storage
         self.upload_to = upload_to
 
