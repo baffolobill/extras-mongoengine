@@ -63,8 +63,8 @@ class FileField(BaseField):
         return instance._data[self.name]
 
     def __set__(self, instance, value):
-        instance._data[key] = value
-        instance._mark_as_changed(key)
+        instance._data[self.name] = value
+        instance._mark_as_changed(self.name)
 
     def get_directory_name(self):
         return os.path.normpath(force_text(datetime.datetime.now().strftime(force_str(self.upload_to))))
