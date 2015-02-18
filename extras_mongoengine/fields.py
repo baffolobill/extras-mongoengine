@@ -4,7 +4,8 @@ from mongoengine import signals
 from mongoengine.base import BaseField, ValidationError
 from mongoengine.fields import IntField, StringField, EmailField
 
-from utils import slugify
+# external deps
+from slugify import slugify
 
 
 __all__ = ('SlugField', 'AutoSlugField', 'TimedeltaField',
